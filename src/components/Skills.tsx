@@ -117,11 +117,11 @@ function SkillCard({ skill }: { skill: typeof skills[0] }) {
                 filter: `blur(${blur}px)`,
                 transformOrigin: "center center"
             }}
-            className={`flex flex-col gap-4 md:gap-6 shrink-0 w-[85vw] md:w-[600px] justify-center px-10 md:px-20 mx-2 md:mx-4 border border-neutral-800 rounded-3xl ${skill.bgColor}`}
+            className={`flex flex-col gap-4 md:gap-6 shrink-0 w-[85vw] md:w-150 justify-center px-10 md:px-20 mx-2 md:mx-4 border border-neutral-800 rounded-3xl ${skill.bgColor}`}
         >
             <div className="flex items-center gap-4 text-sm font-mono text-neutral-500">
                 <span>{skill.id}</span>
-                <span className="w-8 md:w-12 h-[1px] bg-neutral-800"></span>
+                <span className="w-8 md:w-12 h-px bg-neutral-800"></span>
             </div>
 
             <h3 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white/90 font-sans tracking-tight leading-tight shrink-0">{skill.title}</h3>

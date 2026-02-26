@@ -50,7 +50,7 @@ export default function Projects() {
                         <div className="w-full md:w-1/2 flex flex-col gap-6 md:gap-12 order-2 md:order-1 px-8 sm:px-12">
                             <div className="flex items-center gap-4 text-s font-mono text-neutral-400">
                                 <span>0{index + 1}</span>
-                                <span className="w-8 h-[1px] bg-neutral-700"></span>
+                                <span className="w-8 h-px bg-neutral-700"></span>
                                 <span>{project.category}</span>
                             </div>
 
@@ -75,7 +75,7 @@ export default function Projects() {
                                 className={`w-full aspect-4/3 rounded-2xl relative overflow-hidden ring-1 ring-white/10`}
 
                             >
-                                <Image alt={`${project.title}`} src={`${project.image}`} fill objectFit="cover" preload={true} sizes="100vw"/>
+                                <Image alt={`${project.title}`} src={`${project.image}`} fill objectFit="cover" preload={true} draggable={false} onDragStart={(e) => e.preventDefault()} sizes="100vw"/>
                                 {/* Decorative overlay to simulate mockup glass/glare */}
                                 <div className="absolute inset-0 bg-linear-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </motion.div>

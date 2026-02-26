@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   const containerVariants = {
@@ -36,9 +37,9 @@ export default function Hero() {
           variants={itemVariants}
           className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6"
         >
-          <div className="w-16 h-16 rounded-full bg-neutral-800 overflow-hidden shrink-0">
+          <div className="lg:w-26 lg:h-26 h-24 w-24 rounded-full bg-neutral-800 overflow-hidden shrink-0">
             {/* Placeholder for Profile Image */}
-            <div className="w-full h-full bg-neutral-700" />
+            <img src={"/profile.jpeg"} alt="profile" draggable={false} onDragStart={(e) => e.preventDefault()}/>
           </div>
           <p className="text-lg md:text-xl text-neutral-400 max-w-2xl font-medium leading-relaxed">
             I&apos;m a full-stack developer with hands-on experience in web and
@@ -58,6 +59,7 @@ export default function Hero() {
             src="/backdrop.avif"
             alt="backdrop"
             className="w-full h-full object-cover"
+            draggable={false} onDragStart={(e) => e.preventDefault()}
           />
         </motion.div>
 
